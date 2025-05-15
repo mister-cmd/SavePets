@@ -6,10 +6,11 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Lucida Sans', 'Segoe UI', sans-serif;
   background-color: #fefefe;
   color: #333;
   line-height: 1.6;
+  font-size: 18px;
 }
 
 a {
@@ -34,25 +35,30 @@ a {
 }
 
 .logo img {
-  height: 50px;
+  height: 45px;
   width: auto;
 }
 
 /* Навигация */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .nav a {
   color: #fff;
-  margin-left: 20px;
+  margin-left: 15px;
   font-weight: 500;
   transition: color 0.3s ease;
+  font-size: 16px;
 }
 
 .nav a:hover {
-  color: rgba(143, 245, 245, 0.447);
+  color: rgba(143, 245, 245, 0.7);
 }
 
 /* Контент */
 .main {
-  padding-top: 100px;
   padding: 100px 20px 40px;
   max-width: 1100px;
   margin: 0 auto;
@@ -79,6 +85,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 .card {
@@ -88,6 +95,8 @@ a {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: calc(33.333% - 20px);
+  min-width: 280px;
+  max-width: 320px;
 }
 
 .card:hover {
@@ -121,10 +130,48 @@ a {
 }
 
 .footer a {
-  color: rgba(143, 245, 245, 0.447);;
+  color: rgba(143, 245, 245, 0.7);
 }
 
-.main {
-    font-size: 25px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+/* Медиа-запросы для мобилок */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .logo img {
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav a {
+    margin: 5px 0;
+  }
+
+  .main {
+    padding: 80px 15px 40px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about h1,
+  .animals h2 {
+    font-size: 1.5rem;
+  }
 }
