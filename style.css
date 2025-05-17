@@ -6,10 +6,11 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Lucida Sans', 'Segoe UI', sans-serif;
   background-color: #fefefe;
   color: #333;
   line-height: 1.6;
+  font-size: 18px;
 }
 
 a {
@@ -34,25 +35,30 @@ a {
 }
 
 .logo img {
-  height: 50px;
+  height: 45px;
   width: auto;
 }
 
 /* Навигация */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .nav a {
   color: #fff;
-  margin-left: 20px;
+  margin-left: 15px;
   font-weight: 500;
   transition: color 0.3s ease;
+  font-size: 16px;
 }
 
 .nav a:hover {
-  color: rgba(143, 245, 245, 0.447);
+  color: rgba(143, 245, 245, 0.7);
 }
 
 /* Контент */
 .main {
-  padding-top: 100px;
   padding: 100px 20px 40px;
   max-width: 1100px;
   margin: 0 auto;
@@ -62,7 +68,8 @@ a {
   margin-bottom: 60px;
 }
 
-.about h1 {
+.about h1,
+.about h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: #2a4153;
@@ -79,6 +86,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 .card {
@@ -88,6 +96,8 @@ a {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: calc(33.333% - 20px);
+  min-width: 280px;
+  max-width: 320px;
 }
 
 .card:hover {
@@ -110,6 +120,43 @@ a {
   color: #2a4153;
 }
 
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #3c637a;
+  color: #fff;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.button:hover {
+  background-color: #2a4153;
+}
+
+/* Блоковые секции */
+.block-section {
+  background-color: #f9f9f9;
+  padding: 30px 20px;
+  margin: 60px auto;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.block-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #2a4153;
+  text-align: center;
+}
+
+.block-section ul,
+.block-section p {
+  margin-bottom: 15px;
+}
+
 /* Подвал */
 .footer {
   background-color: #3c637a;
@@ -121,10 +168,101 @@ a {
 }
 
 .footer a {
-  color: rgba(143, 245, 245, 0.447);;
+  color: rgba(143, 245, 245, 0.7);
 }
 
-.main {
-    font-size: 25px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+/* Разделы отзывы и FAQ */
+.reviews,
+.faq,
+#contacts {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.reviews h2,
+.faq h2,
+#contacts h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2a4153;
+  text-align: center;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.review {
+  background-color: #f1f8fb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.review span {
+  display: block;
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+
+.faq-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.faq-item h3 {
+  margin-bottom: 10px;
+  color: #2a4153;
+}
+
+/* Адаптация для мобилок */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .logo img {
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav a {
+    margin: 5px 0;
+  }
+
+  .main {
+    padding: 80px 15px 40px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about h1,
+  .animals h2 {
+    font-size: 1.5rem;
+  }
 }
