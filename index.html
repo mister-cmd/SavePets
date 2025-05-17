@@ -8,24 +8,26 @@
 </head>
 <body>
   <header class="header">
-    <a href="/" class="logo">
+    <a href="#about" class="logo">
       <img src="https://cdn2.iconfinder.com/data/icons/animals-13/100/animals-01-1024.png" alt="Логотип Спасите Хвостиков" />
     </a>
     <nav class="nav">
-      <a href="#">Главная</a>
-      <a href="#">Наши хвостики</a>
-      <a href="#">Как помочь</a>
-      <a href="#">Контакты</a>
+      <a href="#about">Главная</a>
+      <a href="#animals">Наши хвостики</a>
+      <a href="#help">Как помочь</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contacts">Контакты</a>
     </nav>
   </header>
 
   <main class="main">
-    <section class="about">
+    <section id="about" class="about">
       <h1>О приюте «Спасите хвостиков!»</h1>
       <p>Мы — команда волонтёров и неравнодушных людей, которые ежедневно помогают бездомным животным найти дом. Наш приют существует благодаря пожертвованиям, любви к хвостатым друзьям и вашему участию.</p>
     </section>
 
-    <section class="animals">
+    <section id="animals" class="animals">
       <h2>Наши хвостики</h2>
       <div class="cards">
         <div class="card">
@@ -33,6 +35,7 @@
           <div class="card-info">
             <h3>Барсик</h3>
             <p>Очень ласковый, любит сидеть на ручках. Идеален для уютных вечеров.</p>
+            <a class="button" href="#contacts">Хочу приютить Барсика</a>
           </div>
         </div>
         <div class="card">
@@ -40,6 +43,7 @@
           <div class="card-info">
             <h3>Билл</h3>
             <p>Весёлый, активный и добрый мальчик. Готов бегать, играть и обнимать.</p>
+            <a class="button" href="#contacts">Хочу приютить Билла</a>
           </div>
         </div>
         <div class="card">
@@ -47,9 +51,54 @@
           <div class="card-info">
             <h3>Мурка</h3>
             <p>Нежная принцесса. Любит уют и смотрит в душу своими глазами.</p>
+            <a class="button" href="#contacts">Хочу приютить Мурку</a>
           </div>
         </div>
       </div>
+    </section>
+
+    <section id="help" class="block-section">
+      <h2>Как вы можете помочь</h2>
+      <p>Наш приют существует благодаря помощи неравнодушных людей. Вы можете помочь нам следующими способами:</p>
+      <ul>
+        <li>Финансовая поддержка через пожертвования</li>
+        <li>Передача корма, медикаментов, игрушек</li>
+        <li>Участие в волонтёрских программах</li>
+        <li>Информационная поддержка в соцсетях</li>
+      </ul>
+    </section>
+
+    <section id="reviews" class="reviews">
+      <h2>Отзывы</h2>
+      <div class="review-list">
+        <div class="review">
+          <p>«Спасибо приюту за нашего Сэма! Он стал настоящим членом семьи.»</p>
+          <span>— Анна и Максим</span>
+        </div>
+        <div class="review">
+          <p>«Мартин — самый игривый котик, которого я встречал. Благодарю всех волонтёров!»</p>
+          <span>— Олег</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <h2>Частые вопросы</h2>
+      <div class="faq-item">
+        <h3>Как можно помочь приюту?</h3>
+        <p>Вы можете пожертвовать средства, принести корм или стать волонтёром. Напишите нам!</p>
+      </div>
+      <div class="faq-item">
+        <h3>Можно ли забрать животное домой?</h3>
+        <p>Да! Мы расскажем вам о каждом питомце и поможем подобрать подходящего друга.</p>
+      </div>
+    </section>
+
+    <section id="contacts" class="block-section">
+      <h2>Контакты</h2>
+      <p>Если вы хотите взять хвостика домой или помочь приюту — свяжитесь с нами!</p>
+      <p>Email: <a href="mailto:help@hvostiki.ru">help@hvostiki.ru</a></p>
+      <p>Телефон: <a href="tel:+79998887766">+7 (999) 888-77-66</a></p>
     </section>
   </main>
 
